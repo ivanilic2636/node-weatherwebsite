@@ -1,5 +1,3 @@
-console.log("This is a js file in public folder");
-
 // fetch("http://localhost:3000/weather?address=Boston").then((response) => {
 //   response.json().then((data) => {
 //     if (data.error) {
