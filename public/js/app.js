@@ -30,7 +30,7 @@ weatherForm.addEventListener("submit", (e) => {
         } else {
           console.log(data);
           errorMessage.textContent = data.location;
-          successMessage.textContent = data.forecast.description + ", feels like its " + data.forecast.feels_like_temperature+ " degrees but actually its " + data.forecast.temperature;
+          successMessage.textContent = data.forecast.description + ", feels like its " + data.forecast.feels_like_temperature+ " degrees but actually its " + data.forecast.temperature + " degrees";
         }
       });
     }
