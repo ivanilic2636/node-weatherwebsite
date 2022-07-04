@@ -28,9 +28,8 @@ weatherForm.addEventListener("submit", (e) => {
           successMessage.textContent = "";
           console.log("Something went wrong");
         } else {
-          console.log(data);
           errorMessage.textContent = data.location;
-          successMessage.textContent = data.forecast.description + ", feels like its " + data.forecast.feels_like_temperature+ " degrees but actually its " + data.forecast.temperature + " degrees";
+          successMessage.textContent = data.forecast.description + ", feels like its " + data.forecast.feels_like_temperature+ " degrees but actually its " + data.forecast.temperature + " degrees." + "The humidity is: "+ data.forecast.humidity;
         }
       });
     }
