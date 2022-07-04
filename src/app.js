@@ -16,6 +16,8 @@ const viewsPath = path.join(__dirname, "../templates/views"); // posto views ima
 const partialsPath = path.join(__dirname, "../templates/partials");
 
 const app = express();
+const port = process.env.PORT || 3000 //setapovanje porta za heroku. Ukoliko heroku nema port koristi se 3000
+
 
 //setting up handlebars
 app.set("view engine", "hbs"); //Ovako se setuje view engine
@@ -106,6 +108,6 @@ app.get("*", (req, res) => {
 });
 
 //app.listen pokrece server. Listenuje poseban port(u ovom slucaju 3000).
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });

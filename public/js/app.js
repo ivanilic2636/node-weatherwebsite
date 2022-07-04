@@ -19,8 +19,9 @@ weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const searchValue = inputForm.value;
 
-  fetch("http://localhost:3000/weather?address=" + searchValue).then(
-    (response) => {
+  // fetch("http://localhost:3000/weather?address=" + searchValue).then(
+    fetch("/weather?address=" + searchValue).then( /*Za heroku se ovako setapuje jer ne znamo na kom smo portu i nije localhost vise */
+  (response) => {
       response.json().then((data) => {
         if (data.error) {
           errorMessage.textContent = data.error;
